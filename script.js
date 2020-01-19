@@ -47,8 +47,8 @@ $(document).ready(function () {
         $("#hour-5 .description").text(hour5);
     }
 
-    var date= newDate();
-    var hours = date.getHours();
+    //var date= newDate();
+    //var hours = date.getHours();
 
 
 
