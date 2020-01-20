@@ -47,15 +47,16 @@ $(document).ready(function () {
         $("#hour-5 .description").text(hour5);
     }
 
-    //var date= newDate();
-    //var hours = date.getHours();
+    var date = new Date();
+    var hours = date.getHours();
 
     $(".time-block").each(function() {
         var compareHours = parseInt($(this).attr("id").split("-")[1]);
 
         if (compareHours < 9) {
-            compareHours += 12
+            compareHours +=12
         }
+
 
         if (compareHours < hours) {
             $(this).addClass("past"); 
