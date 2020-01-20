@@ -50,8 +50,24 @@ $(document).ready(function () {
     //var date= newDate();
     //var hours = date.getHours();
 
+    $(".time-block").each(function() {
+        var compareHours = parseInt($(this).attr("id").split("-")[1]);
 
+        if (compareHours < 9) {
+            compareHours += 12
+        }
 
+        if (compareHours < hours) {
+            $(this).addClass("past"); 
+        } else if (compareHours === hours) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+        } else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
+    })
 
 
 });
